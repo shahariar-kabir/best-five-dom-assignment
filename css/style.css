@@ -29,6 +29,9 @@ header{
     width: 100%;
     height: 250px;
 }
+#finalTotalColor{
+    color: rgb(255, 94, 25);
+}
 
 footer{
     background-color: black;
