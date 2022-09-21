@@ -41,7 +41,7 @@
                                         <div class="card-body">
                                             <h5 class="card-title">Leonel Messi</h5>
                                             <p class="card-text fw-semibold">36 Goals . 120 Assist</p>
-                                            <a href="#" class="btn btn-primary  w-100  fw-bold">SELECT</a>
+                                            <button onclick="selectPlayers('Leonel Messi',this)" class="btn btn-primary   w-100  fw-bold">SELECT</button>
                                         </div>
                                     </div>
                                 </div>
@@ -51,7 +51,7 @@
                                         <div class="card-body">
                                             <h5 class="card-title">Neymar Jr</h5>
                                             <p class="card-text fw-semibold">36 Goals . 120 Assist</p>
-                                            <a href="#" class="btn btn-primary  w-100  fw-bold">SELECT</a>
+                                            <button onclick="selectPlayers('Neymar Jr',this)" class="btn btn-primary   w-100  fw-bold">SELECT</button>
                                         </div>
                                     </div>
                                 </div>
@@ -61,7 +61,7 @@
                                         <div class="card-body">
                                             <h5 class="card-title">Kylian Mbappe</h5>
                                             <p class="card-text fw-semibold">36 Goals . 120 Assist</p>
-                                            <a href="#" class="btn btn-primary  w-100  fw-bold">SELECT</a>
+                                            <button onclick="selectPlayers('Kylian Mbappe',this)" class="btn btn-primary   w-100  fw-bold">SELECT</button>
                                         </div>
                                     </div>
                                 </div>
@@ -71,7 +71,7 @@
                                         <div class="card-body">
                                             <h5 class="card-title">Vitor Machado</h5>
                                             <p class="card-text fw-semibold">36 Goals . 120 Assist</p>
-                                            <a href="#" class="btn btn-primary  w-100  fw-bold">SELECT</a>
+                                            <button onclick="selectPlayers('Vitor Machado',this)" class="btn btn-primary   w-100  fw-bold">SELECT</button>
                                         </div>
                                     </div>
                                 </div>
@@ -81,7 +81,7 @@
                                         <div class="card-body">
                                             <h5 class="card-title">Sergio Ramos</h5>
                                             <p class="card-text fw-semibold">36 Goals . 120 Assist</p>
-                                            <a href="#" class="btn btn-primary  w-100  fw-bold">SELECT</a>
+                                            <button onclick="selectPlayers('Sergio Ramos',this)" class="btn btn-primary   w-100  fw-bold">SELECT</button>
                                         </div>
                                     </div>
                                 </div>
@@ -91,7 +91,7 @@
                                         <div class="card-body">
                                             <h5 class="card-title">Renato Sanches</h5>
                                             <p class="card-text fw-semibold">36 Goals . 120 Assist</p>
-                                            <a href="#" class="btn btn-primary  w-100  fw-bold">SELECT</a>
+                                            <button onclick="selectPlayers('Renato Sanches',this)" class="btn btn-primary   w-100  fw-bold">SELECT</button>
                                         </div>
                                     </div>
                                 </div>
@@ -101,7 +101,7 @@
                                         <div class="card-body">
                                             <h5 class="card-title">Colin Dagba</h5>
                                             <p class="card-text fw-semibold">36 Goals . 120 Assist</p>
-                                            <a href="#" class="btn btn-primary  w-100  fw-bold">SELECT</a>
+                                            <button onclick="selectPlayers('Colin Dagba',this)" class="btn btn-primary   w-100  fw-bold">SELECT</button>
                                         </div>
                                     </div>
                                 </div>
@@ -111,7 +111,7 @@
                                         <div class="card-body">
                                             <h5 class="card-title">Marco Verratti</h5>
                                             <p class="card-text fw-semibold">36 Goals . 120 Assist</p>
-                                            <a href="#" class="btn btn-primary  w-100  fw-bold">SELECT</a>
+                                            <button onclick="selectPlayers('Marco Verratti',this)" class="btn btn-primary   w-100  fw-bold">SELECT</button>
                                         </div>
                                     </div>
                                 </div>
@@ -121,7 +121,7 @@
                                         <div class="card-body">
                                             <h5 class="card-title">Layvin kurzawa</h5>
                                             <p class="card-text fw-semibold">36 Goals . 120 Assist</p>
-                                            <a href="#" class="btn btn-primary  w-100  fw-bold">SELECT</a>
+                                            <button onclick="selectPlayers('Layvin kurzawa',this)" class="btn btn-primary   w-100  fw-bold">SELECT</button>
                                         </div>
                                     </div>
                                 </div>
@@ -131,30 +131,30 @@
                             <div class="w-75">
                                 <div>
                                     <h2>Select Your Best Five</h2>
-                                    <ol></ol>
+                                    <ol id="selected-player-section"></ol>
                                     <h2 class="mt-5">Budget</h2>
                                 </div>
                                 <div class="container mt-3">
                                     <span>Per Player:</span>
-                                    <input class=" ms-1 w-50 rounded bg-dark border text-white " type="text">
+                                    <input id="player-expense" class=" ms-1 w-50 rounded bg-dark border text-white " type="text">
                                 </div>
                                 <div>
-                                    <button class="btn btn-primary w-75 mt-4">Calculate</button>
+                                    <button onclick="calculate()" class="btn btn-primary  w-75 mt-4">Calculate</button>
                                 </div>
                             </div>
                             <div class="w-75 mt-3">
-                                <div>Player Expence $<span>000</span></div>
+                                <div>Player Expense $<span id="total">000</span></div>
                                 <dir>Manager
-                                    <input class=" ms-1 w-50 rounded bg-dark border text-white " type="text">
+                                    <input id="manager" class=" ms-1 w-50 rounded bg-dark border text-white " type="text">
                                 </dir>
                                 <dir>Coach
-                                    <input class=" ms-1 w-50 rounded bg-dark border text-white " type="text">
+                                    <input id="coach" class=" ms-1 w-50 rounded bg-dark border text-white " type="text">
                                 </dir>
                                 <div>
-                                    <button class="btn btn-primary w-75 mt-4">Calculate Total</button>
+                                    <button onclick=" calculateTotal()" class="btn btn-primary  w-75 mt-4">Calculate Total</button>
                                 </div>
                                 <div class="mt-3">
-                                    Total $<span>000</span>
+                                    Total $<span id="finalTotal">000</span>
                                 </div>
                             </div>
                         </div>
