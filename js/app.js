@@ -18,6 +18,10 @@ function calculate(){
     
     const playerPrice = getInputValue('player-expense') || 0;
 
+    if(playerPrice !== Number){
+        alert('Please Input Number Value')
+        return;
+    }
     const list = document.querySelectorAll('.selected');
     const listLength = list.length;
 
@@ -28,6 +32,15 @@ function calculate(){
 function calculateTotal(){
     const managerFees = getInputValue('manager') || 0;
     const coachFees = getInputValue('coach') || 0;
+
+    if(managerFees !== Number){
+        alert('Please Input Number Value')
+        return;
+    }
+    else if(coachFees !== Number){
+        alert('Please Input Number Value')
+        return;
+    }
 
     const previousTotalElement = document.getElementById('total');
     const previousTotalString = previousTotalElement.innerText;
