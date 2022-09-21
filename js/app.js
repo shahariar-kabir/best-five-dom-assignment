@@ -14,13 +14,13 @@ function selectPlayers(name, button) {
     button.setAttribute('disabled', true);
 }
 
-function calculate(){
-    
+function calculate() {
+
     const playerPrice = getInputValue('player-expense') || 0;
     console.log(typeof playerPrice);
 
-    if(typeof playerPrice !== "number"){
-        
+    if (typeof playerPrice !== "number") {
+
     }
     const list = document.querySelectorAll('.selected');
     const listLength = list.length;
@@ -29,16 +29,16 @@ function calculate(){
     totalExpense.innerText = playerPrice * listLength;
 }
 
-function calculateTotal(){
+function calculateTotal() {
     const managerFees = getInputValue('manager') || 0;
     const coachFees = getInputValue('coach') || 0;
 
-    if(typeof managerFees !== "number"){
-        alert('Please Input Number Value')
+    if (typeof managerFees !== "number") {
+        alert('Please Input Number Value');
         return;
     }
-    else if(typeof coachFees !== "number"){
-        alert('Please Input Number Value')
+    else if (typeof coachFees !== "number") {
+        alert('Please Input Number Value');
         return;
     }
 
