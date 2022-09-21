@@ -16,7 +16,7 @@ function selectPlayers(name, button) {
 
 function calculate(){
     
-    const playerPrice = getInputValue('player-expense')
+    const playerPrice = getInputValue('player-expense') || 0;
 
     const list = document.querySelectorAll('.selected');
     const listLength = list.length;
@@ -26,8 +26,8 @@ function calculate(){
 }
 
 function calculateTotal(){
-    const managerFees = getInputValue('manager');
-    const coachFees = getInputValue('coach');
+    const managerFees = getInputValue('manager') || 0;
+    const coachFees = getInputValue('coach') || 0;
 
     const previousTotalElement = document.getElementById('total');
     const previousTotalString = previousTotalElement.innerText;
